@@ -12,8 +12,14 @@ jobs:
       fail-fast: false
       matrix:
         # macOS-only formula — no Linux runner. One OS failing must not cancel
-        # the others' bottle builds, so fail-fast is off.
-        os: [ macos-15-intel, macos-26 ]
+        # the others' bottle builds, so fail-fast is off. Cover the common
+        # arch/OS spread so most users pour a bottle instead of building from
+        # source (which triggers the Xcode-license gate):
+        #   macos-14        -> arm64_sonoma   (min supported, Apple Silicon)
+        #   macos-15        -> arm64_sequoia  (most common today)
+        #   macos-15-intel  -> sequoia        (Intel)
+        #   macos-26        -> arm64_tahoe    (latest, Apple Silicon)
+        os: [ macos-14, macos-15, macos-15-intel, macos-26 ]
     runs-on: ${{ matrix.os }}
     permissions:
       actions: read
