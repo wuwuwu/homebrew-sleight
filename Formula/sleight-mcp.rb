@@ -1,8 +1,8 @@
 class SleightMcp < Formula
   desc "Deterministic action layer for macOS agents (MCP server)"
   homepage "https://sleight.sh"
-  url "https://sleight.sh/dl/sleight-0.7.0.zip"
-  sha256 "f042eb8c9ba984a66a6f0e5bb6b0cc050c86938c63dc31497ad22aa9bfbfb2b3"
+  url "https://sleight.sh/dl/sleight-0.8.0.zip"
+  sha256 "50b332f3bd91a9e8e315eecb035a7eb0ee6a7bed55328664960042de97688b58"
   license "Apache-2.0"
 
   livecheck do
@@ -24,12 +24,12 @@ class SleightMcp < Formula
       sleight-mcp needs Accessibility + Automation permissions
       (System Settings > Privacy & Security). Homebrew cannot grant these.
 
-      Point your MCP client at the installed strategies, e.g. Claude Desktop
+      Add it to your MCP client, e.g. Claude Desktop
       (~/Library/Application Support/Claude/claude_desktop_config.json):
-        "sleight": {
-          "command": "#{opt_bin}/sleight-mcp",
-          "args": ["--strategy-dir", "#{opt_pkgshare}/strategies"]
-        }
+        "sleight": { "command": "#{opt_bin}/sleight-mcp" }
+
+      Strategies are found automatically next to the binary
+      (#{opt_pkgshare}/strategies); override with --strategy-dir if needed.
 
       Upgrade with `brew upgrade` (the built-in auto-updater is for the
       curl-installed ~/.sleight copy, not the Homebrew one).
