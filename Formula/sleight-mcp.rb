@@ -10,6 +10,14 @@ class SleightMcp < Formula
     regex(/"version"\s*:\s*"([^"]+)"/i)
   end
 
+  bottle do
+    root_url "https://github.com/wuwuwu/homebrew-sleight/releases/download/sleight-mcp-0.9.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5f5eabccffa1edfb44c06403b4d41263e4c4e1649aceb2510f8728918d780cb3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5e4a8404637a822dce60f6daa0371e6c987be68a13fc850b1b0331828a7c9832"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f70d2c19f2f65626ccbfaa73cb93741c5960ceb3428981d4871053ce0f806858"
+    sha256 cellar: :any_skip_relocation, sequoia:       "4158ef417ca995c254ab4fff764f37f1e6d4b577c3a7945cf8436aab636cfb1a"
+  end
+
   depends_on macos: :sonoma # macOS 14+ (bare symbol = this version or newer)
 
   def install
