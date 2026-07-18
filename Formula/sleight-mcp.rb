@@ -10,7 +10,6 @@ class SleightMcp < Formula
     regex(/"version"\s*:\s*"([^"]+)"/i)
   end
 
-
   depends_on macos: :sonoma # macOS 14+ (bare symbol = this version or newer)
 
   def install
