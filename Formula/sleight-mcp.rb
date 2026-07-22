@@ -1,8 +1,8 @@
 class SleightMcp < Formula
   desc "Deterministic action layer for macOS agents (MCP server)"
   homepage "https://sleight.sh"
-  url "https://sleight.sh/dl/sleight-0.9.0.zip"
-  sha256 "69776cc651b2314a2d4cbba3b6311411298d30194a60f188b6cfd1b35f5a52be"
+  url "https://sleight.sh/dl/sleight-0.9.1.zip"
+  sha256 "5503b22cbf46a0089eedd2dd062a6fdc1318dedbff6a423a122444868a07569a"
   license "Apache-2.0"
 
   livecheck do
