@@ -39,4 +39,7 @@ jobs:
         if: github.event.pull_request.head.repo.fork == false
         env:
           BRANCH: ${{ github.event.pull_request.head.ref }}
-        run: git push --delete origin "$BRANCH"
+        # Fully qualified: brew pr-pull tags the bottle release
+        # sleight-mcp-<version>, the same name as the bump branch, so a bare
+        # "$BRANCH" is an ambiguous refspec and this step fails every release.
+        run: git push --delete origin "refs/heads/$BRANCH"
