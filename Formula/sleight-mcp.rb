@@ -11,11 +11,11 @@ class SleightMcp < Formula
   end
 
   bottle do
-    root_url "https://github.com/wuwuwu/homebrew-sleight/releases/download/sleight-mcp-0.9.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5f5eabccffa1edfb44c06403b4d41263e4c4e1649aceb2510f8728918d780cb3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5e4a8404637a822dce60f6daa0371e6c987be68a13fc850b1b0331828a7c9832"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f70d2c19f2f65626ccbfaa73cb93741c5960ceb3428981d4871053ce0f806858"
-    sha256 cellar: :any_skip_relocation, sequoia:       "4158ef417ca995c254ab4fff764f37f1e6d4b577c3a7945cf8436aab636cfb1a"
+    root_url "https://github.com/wuwuwu/homebrew-sleight/releases/download/sleight-mcp-0.9.1"
+    sha256                               arm64_tahoe:   "b474e26a881a86a0ec43812daa60346ac6b7092726d598958ea9b523d4ae1299"
+    sha256                               arm64_sequoia: "60bf4b3891658d38f960868ae578f55f87b086b74749b67aec5b7b0f24cdbfc1"
+    sha256                               arm64_sonoma:  "e36e46270be8c0cdcd0f6effb3ba5abcdb3cc4b4093fa8b3454ce34da0719941"
+    sha256 cellar: :any_skip_relocation, sequoia:       "6006a9fb3c72874340769eb4da9b5742930bd596ba7ceb134f9034e3d0f0ce02"
   end
 
   depends_on macos: :sonoma # macOS 14+ (bare symbol = this version or newer)
